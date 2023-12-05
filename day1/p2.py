@@ -3,8 +3,6 @@ import regex as re
 with open('input', encoding='utf-8') as f:
     content = f.readlines()
 
-content = [x.strip() for x in content]
-
 convert_tabel = {
     'one': '1',
     'two': '2',
@@ -28,4 +26,4 @@ for line in content:
             line[i] = convert_tabel.get(s)
 
 result = sum(int(x[0])*10 + int(x[-1]) for x in content)
-print(result)
+
