@@ -15,7 +15,7 @@ convert_tabel = {
     'nine': '9',
 }
 
-pattern = "\\d"
+pattern = r"\d"
 for key in list(convert_tabel.keys()):
     pattern += '|'+key
 
@@ -26,4 +26,3 @@ for line in content:
             line[i] = convert_tabel.get(s)
 
 result = sum(int(x[0])*10 + int(x[-1]) for x in content)
-
